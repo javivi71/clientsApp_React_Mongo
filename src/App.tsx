@@ -33,6 +33,10 @@ import "@ionic/react/css/palettes/dark.system.css";
 /* Theme variables */
 import "./theme/variables.css";
 import ClientesPage from "./pages/ClientesPage";
+import { ClientService } from "./services/clientService";
+
+import ClientesAddPage from "./pages/ClientesAddPage";
+import ClientesEditPage from "./pages/ClientesEditPage";
 
 setupIonicReact();
 
@@ -44,9 +48,13 @@ const App: React.FC = () => (
            <ClientesPage/>
         </Route>
 
-        <Route exact path="/home">
-          <Home />
+        <Route exact path="/nuevo">
+          <ClientesAddPage />
         </Route>
+
+        <Route exact path="/editar">
+          <ClientesEditPage/>
+        </Route>   
 
         <Route exact path="/">
           <Redirect to="/home" />
