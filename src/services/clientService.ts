@@ -34,9 +34,25 @@ export class ClientService{
      return await res.json();
   } // Fin updateClient()
 
-    static async deleteClient(id:number) {
+/*     static async deleteClient(id:number) {
      const res = await fetch( "http://localhost:3000/clients/delete/" + id );
      return await res.json();
-  } // Fin deleteClient()
+  } // Fin deleteClient() */
 
+  static async deleteClient(id: string | undefined) {
+    // Verificamos que el id existe
+    if (!id) {
+      throw new Error("ID de cliente no válido");
+    }
+
+    const res = await fetch("http://localhost:3000/clients/delete/" + id, {
+      method: "delete"  // Añadimos el método DELETE explícitamente
+    });
+
+    if (!res.ok) {
+      throw new Error("Error al eliminar el cliente");
+    }
+
+    return await res.json();
+  }
 }
