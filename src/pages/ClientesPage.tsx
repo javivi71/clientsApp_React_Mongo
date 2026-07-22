@@ -46,6 +46,7 @@ export default function ClientesPage() {
         <h2 className="text-5xl font-bold text-blue-600 text-center mt-5" >
           Tabla clientes
         </h2>
+        <p>Listado provisional de clientes admitidos</p>
 
         <table>
           <thead>
