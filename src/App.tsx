@@ -52,12 +52,7 @@ const App: React.FC = () => (
           <ClientesAddPage />
         </Route>
 
-{/*         <Route exact path="/editar">
-          <ClientesEditPage/>
-        </Route>   */} 
-
- {/* 🆕 Ruta con parámetro para editar */}
-        <Route exact path="/editar/:_id">
+        <Route exact path="/editar">
           <ClientesEditPage />
         </Route>
         
