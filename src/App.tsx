@@ -37,6 +37,7 @@ import { ClientService } from "./services/clientService";
 
 import ClientesAddPage from "./pages/ClientesAddPage";
 import ClientesEditPage from "./pages/ClientesEditPage";
+import LoginPage from "./pages/LoginPage";
 
 setupIonicReact();
 
@@ -44,6 +45,11 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>      
       <IonRouterOutlet>
+
+        <Route exact path="/login">
+           <LoginPage />
+        </Route>
+
         <Route exact path="/clients">
            <ClientesPage/>
         </Route>
