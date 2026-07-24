@@ -11,6 +11,7 @@ import { ClientService } from "../services/clientService";
 import "./ClientesPage.scss";
 
 import { useHistory } from "react-router";
+import NavBar from "../components/NavBar";
 
 export default function ClientesPage() {
   const [clients, setClients] = useState<any[]>([]);
@@ -42,8 +43,10 @@ export default function ClientesPage() {
 
   return (
     <IonPage>
+      <NavBar />
+
       <IonContent>
-        <h2 className="text-5xl font-bold text-blue-600 text-center mt-5" >
+        <h2 className="text-5xl font-bold text-blue-600 text-center mt-5">
           Tabla clientes
         </h2>
         <p>Listado provisional de clientes admitidos</p>
@@ -71,11 +74,11 @@ export default function ClientesPage() {
                 </td>
                 <td>
                   <IonButton
-                    /* onClick={() => handleDelete(cliente._id, cliente.nombre)} */
                     onClick={() => {
                       confirmarDelete(cliente._id);
                     }}
                   >
+                    {" "}
                     🗑️ Eliminar
                   </IonButton>
                 </td>

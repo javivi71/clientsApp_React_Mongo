@@ -37,11 +37,6 @@ export class ClientService{
      return await res.json();
   } // Fin updateClient()
 
-/*     static async deleteClient(id:number) {
-     const res = await fetch( "http://localhost:3000/clients/delete/" + id );
-     return await res.json();
-  } // Fin deleteClient() */
-
   static async deleteClient(id: number ) {
     const res = await fetch("http://localhost:3000/clients/delete/" + id, {
       method: "delete"  // Añadimos el método DELETE explícitamente

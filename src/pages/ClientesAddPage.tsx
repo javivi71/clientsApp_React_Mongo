@@ -11,9 +11,6 @@ export default function ClientesAddPage(){
 
    const save = async () => {
     await ClientService.addClient(client);
-
-    // const navigate = useNavigate(); <- React Router 6
-    // history.push("/clients");
   };
 
     return (
